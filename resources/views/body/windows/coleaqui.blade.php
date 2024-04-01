@@ -26,7 +26,7 @@
     <textarea id="texto" name="texto" rows="5" cols="33">
 Cole ou Escreva a música cifrada aqui.
     </textarea>
-    
+     
   </div>
 </form>
 
