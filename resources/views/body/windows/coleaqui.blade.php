@@ -29,7 +29,7 @@
   <div class='invisible'>
     <input name="fator" id="fator" value="{{ $fator }}" /> 
     <input name="fatorAntigo" id="fatorAntigo" value="{{ $fatorAntigo }}"/>
-    <textarea name="textoo" id="texto" rows="5" cols="60">{{ $textoAntigoString }}</textarea>
+    <textarea name="textoAntigo" id="textoAntigo" rows="5" cols="60">{{ $textoAntigoString }}</textarea>
   </div>
     
   
@@ -39,7 +39,8 @@
     @endforeach 
   @elseif($textoAntigoString == "!0!")
     <div>
-      <textarea rows="5" cols="60">Cole ou digite a música cifrada aqui.</textarea>
+      <label>Cole ou digite a música cifrada aqui:</label><br />
+      <textarea name="textoNovo" id="textoNovo" rows="5" cols="60"></textarea>
     </div>
   @endif
   
