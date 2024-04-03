@@ -36,15 +36,16 @@ class ConectAPIController extends Controller
 
   public function outroTom(Request $request)
   {
-    //dd($request);
     $fatorNovoInteger = intval($request['fator']);
     $fatorAntigoInteger = intval($request['fatorAntigo']);
     $fator = ($fatorAntigoInteger + $fatorNovoInteger);
     $request['fator'] = strval($fator);
 
-    $request['textoNovo'] = $request['textoAntigo'];
+    if($request['textoAntigo'] != '!0!'){
+      $request['textoNovo'] = $request['textoAntigo'];
+    }
 
-    $request['textoAntigoString'] = null;
+    $request['textoAntigo'] = null;
     $request['fatorAntigo'] = null;
     
     
